@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Component
 public class CommonLogAdvice {
 
-    @Around("within(@org.springframework.stereotype.Service *)")
+    @Around("within(@org.springframework.stereotype.Service *) || within(com.baomidou.mybatisplus.extension.service.IService+)")
     public Object handleExceptionLog(ProceedingJoinPoint jp) throws Throwable {
         try {
             // 记录方法进入日志
