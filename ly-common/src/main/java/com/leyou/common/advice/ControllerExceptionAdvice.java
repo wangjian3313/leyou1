@@ -1,7 +1,6 @@
 package com.leyou.common.advice;
 
 import com.leyou.common.exception.LyException;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -16,6 +15,11 @@ public class ControllerExceptionAdvice {
      */
     @ExceptionHandler(LyException.class)
     public ResponseEntity<String> handleLyException(LyException e) {
+        return ResponseEntity.status(400).body(e.getMessage());
+    }
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<String> RuntimeLyException(Exception e) {
+        System.out.println("异常处理哦了");
         return ResponseEntity.status(400).body(e.getMessage());
     }
 }

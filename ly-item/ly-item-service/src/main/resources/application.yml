@@ -15,7 +15,7 @@ eureka:
 
 mybatis-plus:
   type-aliases-package: com.leyou.item.entity # 别名扫描包
-  # mapper-locations: classpath*: mappers/*.xml # mapper的xml文件地址
+   #mapper-locations: classpath*: mappers/*.xml # mapper的xml文件地址
   global-config:
     db-config:
       id-type: auto # id默认为自增长
