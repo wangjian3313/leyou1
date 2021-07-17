@@ -16,6 +16,7 @@ public class BrandController {
 
     private final BrandService brandService;
 
+
     public BrandController(BrandService brandService) {
         this.brandService = brandService;
     }

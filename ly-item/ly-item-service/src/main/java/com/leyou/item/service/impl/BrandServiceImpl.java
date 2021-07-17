@@ -1,22 +1,16 @@
 package com.leyou.item.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.leyou.common.dto.PageDTO;
-import com.leyou.common.exception.LyException;
 import com.leyou.item.dto.BrandDTO;
-import com.leyou.item.dto.CategoryDTO;
 import com.leyou.item.entity.Brand;
-import com.leyou.item.entity.Category;
 import com.leyou.item.entity.CategoryBrand;
 import com.leyou.item.mapper.BrandMapper;
 import com.leyou.item.service.BrandService;
 import com.leyou.item.service.CategoryBrandService;
-import com.netflix.discovery.util.StringUtil;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
@@ -31,7 +25,7 @@ public class BrandServiceImpl extends ServiceImpl<BrandMapper, Brand> implements
 
     private final CategoryBrandService categoryBrandService;
 
-    @Autowired
+
     public BrandServiceImpl(CategoryBrandService categoryBrandService) {
         this.categoryBrandService = categoryBrandService;
     }

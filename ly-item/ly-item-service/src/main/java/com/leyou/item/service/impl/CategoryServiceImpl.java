@@ -21,7 +21,6 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> i
 
     private final CategoryBrandService categoryBrandService;
 
-    @Autowired
     public CategoryServiceImpl(CategoryBrandService categoryBrandService) {
         this.categoryBrandService = categoryBrandService;
     }
