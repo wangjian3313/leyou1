@@ -22,7 +22,7 @@ public class SkuServiceImpl extends ServiceImpl<SkuMapper, Sku> implements SkuSe
     }
 
     @Override
-    public List<SkuDTO> querySkuBySpuId(Integer id) {
+    public List<SkuDTO> querySkuBySpuId(Long id) {
 
         return SkuDTO.convertEntityList( this.list(new QueryWrapper<Sku>().eq("spu_id",id)));
     }

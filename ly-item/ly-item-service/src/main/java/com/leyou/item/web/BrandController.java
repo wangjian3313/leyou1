@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/brand")
-public class BrandController {
+public class  BrandController {
 
     private final BrandService brandService;
 
@@ -58,7 +58,7 @@ public class BrandController {
     /**
      * 根据id查询品牌
      */
-    @GetMapping("/brand/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<BrandDTO> queryBrandById(@PathVariable("id") Long id){
         return ResponseEntity.ok(brandService.queryBrandById(id));
     }

@@ -13,5 +13,5 @@ public interface SkuService extends IService<Sku> {
 
     List<SkuDTO> querySkuById(List<Long> ids);
 
-    List<SkuDTO> querySkuBySpuId(Integer id);
+    List<SkuDTO> querySkuBySpuId(Long id);
 }

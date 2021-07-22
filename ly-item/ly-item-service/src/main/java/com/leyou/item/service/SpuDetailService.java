@@ -6,5 +6,5 @@ import com.leyou.item.entity.SpuDetail;
 
 
 public interface SpuDetailService extends IService<SpuDetail> {
-    SpuDetailDTO querySpuDetailById(Integer id);
+    SpuDetailDTO querySpuDetailById(Long id);
 }

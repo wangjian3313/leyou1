@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class SpuDetailServiceImpl extends ServiceImpl<SpuDetailMapper, SpuDetail> implements SpuDetailService {
     @Override
-    public SpuDetailDTO querySpuDetailById(Integer id) {
+    public SpuDetailDTO querySpuDetailById(Long id) {
         return new SpuDetailDTO( this.getById(id));
     }
 }
